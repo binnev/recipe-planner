@@ -1,0 +1,24 @@
+recipe = egg in a basket
+
+ingredients:
+3, grams, salt
+0.5, g, pepper
+1, large egg
+1, slice, bread
+butter
+
+method:
+butter the slice of bread
+cut out the lid with the pint glass
+fry the lid with salt and pepper
+briefly fry the bread on one side, then flip it 
+separate the egg white and yolk. Pour the white into the bread hole and fry until it is opaque
+place the yolk carefully on top. Add salt and pepper. Fry until the yolk is warm and the white is fully cooked (no jiggly bits).
+
+preparation time = 2 minutes
+cooking time = 10 minutes
+
+equipment:
+pint glass
+frying pan
+

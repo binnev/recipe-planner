@@ -1,0 +1,6 @@
+recipe = dummy
+
+ingredients:
+1, loaf, bread
+1, tsp, salt
+oats
