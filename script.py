@@ -1,12 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue May 21 19:10:03 2019
-
-@author: rmn
-"""
-
 import glob
+from functions import *
 
 recipe_files = glob.glob("recipes/*.txt")
 recipes = []
