@@ -121,4 +121,12 @@ def print_shopping_list(INGREDIENTS):
             unit = "" if unit is None else str(unit)+" "
             print(amount+unit+ing)
     
+# main part of the program here
+import glob
 
+recipe_files = glob.glob("recipes/*.txt")
+recipes = []
+for file in recipe_files:
+    recipes.append(load_recipe(file))
+INGREDIENTS, EQUIPMENT = make_shopping_list(recipes)
+print_shopping_list(INGREDIENTS)
