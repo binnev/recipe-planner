@@ -1,4 +1,4 @@
-recipe = egg in a basket
+name = egg in a basket
 
 ingredients:
 3, grams, salt

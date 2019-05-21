@@ -1,7 +1,3 @@
-
-import glob
-
-
 def parse_ingredient(ingredient):
     
     """ function to parse one ingredient line from a recipe file, based on 
@@ -24,6 +20,9 @@ def parse_ingredient(ingredient):
 
 
 def load_recipe(text):
+    """ function to load a recipe from its .txt file and parse the lines into
+    an organised dictionary """
+    
     # open the file
     with open(file) as f:
         text = f.read().lower().split("\n")
@@ -63,10 +62,10 @@ def load_recipe(text):
     return recipe
 
 
-recipe_files = glob.glob("*.txt")
-recipes = []
-for file in recipe_files:
-    recipes.append(load_recipe(file))
+def add_ingredients(ing1, ing2): 
+    """ function to add together two of the same ingredient, with different 
+    amounts and units """
+    
             
         
 def make_shopping_list(recipe_list):
@@ -81,22 +80,24 @@ def make_shopping_list(recipe_list):
         # for each ingredient, add it to the shopping list
         for ing, v in ingredients.items():  
             units, amount = v["units"], v["amount"]
+            
             # if it isn't already in the shopping list
             if ing not in INGREDIENTS:
                 # add it to the shopping list
                 INGREDIENTS[ing] = {units: amount}
+                
             else:  # if the ingredient is already in the list
                 # attempt to merge it with the existing one
+                
+                # if no amount was given for this ingredient, skip this ingr.
+                if amount is None:
+                    continue
+                
+                # if an amount is given, add it to the existing unit amount
                 if units not in INGREDIENTS[ing]:  # if there's no entry for this unit
                     INGREDIENTS[ing][units] = amount  # make a new entry
                 else:  # if there's already an entry for this unit 
-                    try:
-                        INGREDIENTS[ing][units] += amount  # add the amount
-                        """ probably need to add a try/except here to catch Nones """
-                    except TypeError:
-                        print("i did a dookie. Sorry.")
-                    finally:
-                        print("For ingredient {} I was trying to add {} to {}".format(ing, amount, units))
+                    INGREDIENTS[ing][units] += amount  # add the amount
                     
         # make equipment list
         if equipment is not None:
@@ -104,11 +105,10 @@ def make_shopping_list(recipe_list):
                 EQUIPMENT.add(eq)
                     
     return INGREDIENTS, EQUIPMENT
-    
 
-INGREDIENTS, EQUIPMENT = make_shopping_list(recipes)
 
 def print_shopping_list(INGREDIENTS):
+    print("SHOPPING LIST:")
     for ing, v in INGREDIENTS.items():  # for each entry
         for unit, amount in v.items():
             # convert to strings and remove Nones
@@ -121,13 +121,4 @@ def print_shopping_list(INGREDIENTS):
             unit = "" if unit is None else str(unit)+" "
             print(amount+unit+ing)
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-print_shopping_list(INGREDIENTS)
+
