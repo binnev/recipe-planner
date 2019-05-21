@@ -125,8 +125,17 @@ def print_shopping_list(INGREDIENTS):
 import glob
 
 recipe_files = glob.glob("recipes/*.txt")
-recipes = []
-for file in recipe_files:
-    recipes.append(load_recipe(file))
+recipes = [load_recipe(file) for file in recipe_files]
+#recipes = []
+#for file in recipe_files:
+#    recipes.append(load_recipe(file))
 INGREDIENTS, EQUIPMENT = make_shopping_list(recipes)
 print_shopping_list(INGREDIENTS)
+
+"""
+TODO:
+- write a recipe class?
+- write a search function
+- write the main program that guides the user--executable in the python command 
+    line 
+"""
