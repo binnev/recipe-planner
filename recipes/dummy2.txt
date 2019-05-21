@@ -1,4 +1,4 @@
-recipe = dummy
+name = dummy2
 
 ingredients:
 7, loaf, bread
@@ -7,3 +7,4 @@ ingredients:
 2000, kg, onions
 5, kilo, onions
 6, water
+2, apples

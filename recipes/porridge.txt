@@ -1,4 +1,4 @@
-recipe = porridge
+name = porridge
 cooking time = 24 hours
 prep time = 2 minutes
 
@@ -6,6 +6,7 @@ ingredients:
 40, gram, oats
 water
 1, handful, chia seeds
+apples
 
 equipment:
 fridge
