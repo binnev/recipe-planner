@@ -19,7 +19,7 @@ def parse_ingredient(ingredient):
         raise Exception("too many commas in this ingredient line: "+ing)
 
 
-def load_recipe(text):
+def load_recipe(file):
     """ function to load a recipe from its .txt file and parse the lines into
     an organised dictionary """
     

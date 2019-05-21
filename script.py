@@ -1,5 +1,5 @@
 import glob
-from functions import *
+from recipe_functions import *
 
 recipe_files = glob.glob("recipes/*.txt")
 recipes = []
