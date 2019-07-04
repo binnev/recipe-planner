@@ -1,5 +1,8 @@
 # recipe-planner
-A Python-based piece of software to organise recipes and plan shopping lists. 
+A recipe database and Python-based piece of software to organise recipes and plan shopping lists. 
+
+## Cooking the recipes
+Go to the readable-recipes folder. Click on one of the `.md` files to view it. These should render nicely on phones, tablets, etc. 
 
 Aims: 
 - Store recipes electronically
