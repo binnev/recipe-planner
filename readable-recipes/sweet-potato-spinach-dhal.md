@@ -4,18 +4,18 @@ Author: Robin Neville
 
 ## Ingredients:
 - [ ] 1 tbsp sesame oil
-- [ ] 1 red onion; finely chopped
-- [ ] 1 clove garlic; crushed
-- [ ] 1 thumb-sized piece ginger; grated
-- [ ] 1 red chilli; chopped
+- [ ] 1 red onion, finely chopped
+- [ ] 1 clove garlic, crushed
+- [ ] 1 thumb-sized piece ginger, grated
+- [ ] 1 red chilli, chopped
 - [ ] 1.5 tsp turmeric powder
 - [ ] 1.5 tsp cumin powder
-- [ ] 2 sweet potatoes; cut into chunks
+- [ ] 2 sweet potatoes, cut into chunks
 - [ ] 250 g split red lentils
 - [ ] 600 ml vegetable stock
 - [ ] 80 g spinach
-- [ ] 4 spring onions; chopped diagonally
-- [ ] thai basil leaves; torn
+- [ ] 4 spring onions, chopped diagonally
+- [ ] thai basil leaves, torn
 - [ ] pitta breads
 - [ ] greek yoghurt and some kind of herb for dipping
 

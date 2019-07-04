@@ -4,15 +4,15 @@ Author: Runa Begum
 
 ## Ingredients:
 - [ ] 1 cup red lentils
-- [ ] 2 medium onions (finely chopped)
-- [ ] 2 green chillies (finely chopped)
+- [ ] 2 medium onions, finely chopped
+- [ ] 2 green chillies, finely chopped
 - [ ] 4 small bay leaves
 - [ ] 0.5 tsp turmeric powder
 - [ ] 0.5 tsp coriander powder
 - [ ] 0.5 tsp chilli powder
 - [ ] 0.5 tsp curry powder
 - [ ] 1 tsp salt
-- [ ] 0.5 bulb garlic (finely chopped)
+- [ ] 0.5 bulb garlic, finely chopped
 - [ ] fresh coriander
 
 ## Method:

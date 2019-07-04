@@ -7,9 +7,9 @@ From https://www.youtube.com/watch?v=IlrH2CEoIzQ
 
 
 ## Ingredients:
-- [ ] 300 gram aubergines (quartered lengthwise)
-- [ ] 1 red onion (chopped)
-- [ ] 1 tomato (chopped)
+- [ ] 300 gram aubergines, quartered lengthwise
+- [ ] 1 red onion, chopped
+- [ ] 1 tomato, chopped
 - [ ] 4 tbsp "poppy seed paste" (it's white though)
 - [ ] mustard seeds to fry in oil
 - [ ] 2 tbsp natural yoghurt

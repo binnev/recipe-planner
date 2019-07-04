@@ -3,11 +3,11 @@ Author: Runa Begum
 
 
 ## Ingredients:
-- [ ] 3 medium onions; finely chopped
+- [ ] 3 medium onions, finely chopped
 - [ ] 4 green chillies
 - [ ] 2 400g can chickpeas
 - [ ] 1 400g can chopped plum tomatoes
-- [ ] 300 g potatoes; peeled and chopped
+- [ ] 300 g potatoes, peeled and chopped
 - [ ] 2 tsp mustard seeds
 - [ ] 2 tsp ginger paste
 - [ ] 2 tsp garlic paste

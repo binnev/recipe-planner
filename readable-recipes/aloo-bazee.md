@@ -3,9 +3,9 @@ Author: Runa Begum
 
 
 ## Ingredients:
-- [ ] 1 kg King Edward potatoes; peeled and thinly chopped into matchsticks.
-- [ ] 1 large white onion; finely chopped
-- [ ] 3 green chillies; finely chopped
+- [ ] 1 kg King Edward potatoes, peeled and thinly chopped into matchsticks.
+- [ ] 1 large white onion, finely chopped
+- [ ] 3 green chillies, finely chopped
 - [ ] 1 tbsp salt
 - [ ] 1 tsp turmeric powder
 - [ ] 1 tsp coriander powder
