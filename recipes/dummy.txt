@@ -1,7 +1,0 @@
-name = dummy
-
-ingredients:
-1, loaf, bread
-1, tsp, salt
-oats
-5, kg, apples
