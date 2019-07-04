@@ -211,6 +211,10 @@ def print_shopping_list(INGREDIENTS):
     other recipes.
 - [ ] Add another function to go and fetch the correct unit when multiple exist e.g.
     "gram, grams, g" --> fetch the correct one from a list of aliases
+- [ ] Handle plurals: "onion", "onions" is easy; "chilli", "chillies" is not...
+- [ ] Make the script somehow know that "large onion", "onion", "large white onion" etc
+    are all part of the same class of thing. If not adding them together on the shopping
+    list, then at least organise them such that they're near one another on the list.
 
 """
 
