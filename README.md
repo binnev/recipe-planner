@@ -15,7 +15,16 @@ The "author" and "source" fields will produce lines in the output markdown files
 The user can add other fields provided they have correct `YAML` syntax, but the python script won't currently do anything with them.
 
 ### Ingredient syntax
-To preserve the natural-language feel of the input files, I have implemented a simple comma separated syntax: 
+To preserve the natural-language feel of the input files, I have implemented a simple comma separated syntax for the ingredients. 
+
+Following the YAML syntax seems overly cumbersome: 
+```yaml
+ingredients: 
+  chilli powder:
+    amount: 1
+    units: tsp
+  
+```
 ```yaml
 ingredients:
   - 1, tsp, chilli powder
@@ -28,5 +37,5 @@ ingredients:
 - Plan meals: generate a single shopping list for multiple recipes
 - Use up spare pantry items: find recipes that best match user-provided spare pantry items
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTUwMDk3NTddfQ==
+eyJoaXN0b3J5IjpbLTE2NDc0NTA1MDVdfQ==
 -->
