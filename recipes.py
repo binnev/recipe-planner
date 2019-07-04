@@ -42,6 +42,11 @@ def load_recipe(file):
     # add source directory to recipe
     recipe["source_dir"] = file.parent if file.parent else pathlib.Path()
 
+    # if there's an image entry, prepend source dir to image path
+    if "image" in recipe:
+        img = pathlib.Path(recipe["image"])
+        recipe["image"] = recipe["source_dir"] / img
+
     # parse ingredient lines
     ingredients = recipe["ingredients"]
     recipe["ingredients"] = d = dict()
@@ -75,7 +80,13 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
 
     # prepend the directory to the filename if directory is passed
     if directory:
-        filename = pathlib.Path(directory) / filename
+        directory = pathlib.Path(directory)
+        filename = directory / filename
+
+        # also create relative path to image
+        if "image" in recipe:
+            relative_path_to_cwd = pathlib.Path("/".join(".." for i in directory.parts))
+            recipe["image"] = relative_path_to_cwd / recipe["image"]
 
     # construct list of lines to write to file
     lines = ["# {}\n".format(recipe["title"])]  # write title
@@ -166,10 +177,11 @@ def print_shopping_list(INGREDIENTS):
 
 # %% TODO
 """
-- write a recipe class?
-- write a search function
-- write the main program that guides the user--executable in the python command
+- [ ] write a recipe class?
+- [ ] write a search function
+- [ ] write the main program that guides the user--executable in the python command
     line
+- [ ] fix broken images---use relative paths
 """
 
 # %% testing
