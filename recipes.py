@@ -192,6 +192,17 @@ def print_shopping_list(INGREDIENTS):
 - [ ] write the main program that guides the user--executable in the python command
     line
 - [x] fix broken images---use relative paths
+- [ ] add support for multiple ingredients lists. E.g. one for fishball mix, and one
+    for the curry mix. (a) subdivide ingredients list using dicts? Then the load
+    function and the md save function will have to be able to parse this. (b) Have
+    multiple ingredients lists: "ingredients-fish ball mix: ...list..." and
+    "ingredients-curry mix: ...list...". Then have the load/save functions do their
+    ingredients routine on ANY property of the recipe that *contains* the word
+    "ingredients".
+- [ ] have another field in each ingredient for "prep". This will contain the stuff
+    after the semicolon in "2, large white onions; finely chopped". This will prevent
+    preparation instructions clashing with other entries of the same ingredient from
+    other recipes.
 """
 
 # %% testing
