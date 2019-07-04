@@ -17,15 +17,16 @@ The user can add other fields provided they have correct `YAML` syntax, but the 
 ### Ingredient syntax
 To preserve the natural-language feel of the input files, I have implemented a simple syntax for the ingredients. Commas separate the amount, units, and name of the ingredient. 
 
-Not all ingredients require all three fields, so the user can leave some out. Three 
+Not all ingredients require all three fields, so the user can leave some out. Three modes are supported:
 ```yaml
 ingredients:
+  # amount, units, name
   - 1, tsp, chilli powder # 2 commas = all three fields
   - 2, large white onions # 1 comma = no units
   - fresh coriander       # no comma = only name
 ```
 
-Following the YAML syntax seems overly cumbersome. Instead of defining an ingredient like this: 
+Writing this with correct YAML syntax produces overly cumbersome input files: 
 ```yaml
 - potatoes:
     amount: 1
@@ -43,5 +44,5 @@ we can instead write:
 - Plan meals: generate a single shopping list for multiple recipes
 - Use up spare pantry items: find recipes that best match user-provided spare pantry items
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MjM3OTkxOF19
+eyJoaXN0b3J5IjpbNjU4NjI3NDg0XX0=
 -->
