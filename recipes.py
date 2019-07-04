@@ -98,11 +98,11 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
     lines = ["# {}\n".format(recipe["title"].title())]  # write title
     # optional entries
     if "author" in recipe:
-        lines.append("Author: {}\n".format(recipe["author"]))
+        lines.append("Author: {}\n\n".format(recipe["author"]))
     if "source" in recipe:
-        lines.append("From {}\n".format(recipe["source"]))
+        lines.append("From {}\n\n".format(recipe["source"]))
     if "image" in recipe:
-        lines.append("<img src='{}' width='300px'>\n".format(recipe["image"]))
+        lines.append("<img src='{}' width='300px'>\n\n".format(recipe["image"]))
     # write ingredients list
     lines.append("\n## Ingredients:\n")
     for ingredient, values in recipe["ingredients"].items():
