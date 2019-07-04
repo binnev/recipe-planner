@@ -18,7 +18,7 @@ Author: Robin Neville, Runa Begum
 - [ ] 1 vegetable stock cube
 
 ## Method:
-1. onions and garlic with dried thyme
+1. sweat onions and garlic with dried thyme
 2. add cubed potato and brown
 3. add spice mix (with a bit of water) and fry gently
 4. add beans and tomatoes, stock cube, and a cup of water
