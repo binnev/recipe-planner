@@ -3,11 +3,11 @@ Author: Runa Begum
 
 
 ## Ingredients:
-- [ ] 3 medium onions, finely chopped
+- [ ] 3 medium onions,; finely chopped
 - [ ] 4 green chillies
 - [ ] 2 400g can chickpeas
 - [ ] 1 400g can chopped plum tomatoes
-- [ ] 300 g potatoes, peeled and chopped
+- [ ] 300 g potatoes,; peeled and chopped
 - [ ] 2 tsp mustard seeds
 - [ ] 2 tsp ginger paste
 - [ ] 2 tsp garlic paste
@@ -28,3 +28,6 @@ Author: Runa Begum
 4. Add chickpeas and 500ml water. Bring to boil then simmer covered for ~5 minutes.
 5. Add potatoes. Leave to simmer.
 6. Once potatoes are soft, add the chopped coriander and serve.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTU2OTcxMjMyM119
+-->
