@@ -1,4 +1,4 @@
-# Egg In A Basket
+# Egg in a basket
 <img src='../recipes/egg-in-a-basket.jpg' width='300px'>
 
 

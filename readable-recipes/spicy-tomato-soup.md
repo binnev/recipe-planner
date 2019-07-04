@@ -1,4 +1,4 @@
-# Spicy Tomato Soup
+# Spicy tomato soup
 Author: Gordon Ramsay
 
 From https://www.youtube.com/watch?v=fYBRZjkDxVk
