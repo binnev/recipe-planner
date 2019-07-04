@@ -60,6 +60,10 @@ def load_recipe(file):
     return recipe
 
 
+def punctuation_to_dashes(s):
+    return "".join(map(lambda x: "-" if x in string.punctuation else x, s))
+
+
 def recipe_to_markdown(recipe, filename=None, directory=None):
     """ store a recipe in an easily readable markdown format (good for phones in the
     kitchen) """
@@ -68,7 +72,9 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
     if filename is None:
         # remove punctutation
         """TODO: this is not very efficient. Replace with a regex"""
-        filename = "".join(c for c in recipe["title"] if c not in string.punctuation)
+#        filename = "".join(c for c in recipe["title"] if c not in string.punctuation)
+
+        filename = punctuation_to_dashes(recipe["title"])
         filename = filename.strip()
         # convert spaces to dashes
         filename = filename.replace(" ", "-")+".md"
@@ -89,7 +95,7 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
             recipe["image"] = relative_path_to_cwd / recipe["image"]
 
     # construct list of lines to write to file
-    lines = ["# {}\n".format(recipe["title"])]  # write title
+    lines = ["# {}\n".format(recipe["title"].title())]  # write title
     # optional entries
     if "author" in recipe:
         lines.append("Author: {}\n".format(recipe["author"]))
@@ -181,7 +187,7 @@ def print_shopping_list(INGREDIENTS):
 - [ ] write a search function
 - [ ] write the main program that guides the user--executable in the python command
     line
-- [ ] fix broken images---use relative paths
+- [x] fix broken images---use relative paths
 """
 
 # %% testing

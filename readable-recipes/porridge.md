@@ -1,4 +1,4 @@
-# porridge
+# Porridge
 
 ## Ingredients:
 - [ ] 40 gram oats
