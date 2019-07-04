@@ -3,12 +3,12 @@ Author: Runa Begum
 
 
 ## Ingredients:
-- [ ] 2 onions, finely chopped
+- [ ] 2 onions,; finely chopped
 - [ ] 2 small bay leaves
-- [ ] 3 green chillies, finely chopped
-- [ ] 1 large cauliflower, cut into medium florets and leaves finely chopped
-- [ ] 2 potatoes, cut into large cubes
-- [ ] 2 tomatoes, cut into eights
+- [ ] 3 green chillies,; finely chopped
+- [ ] 1 large cauliflower,; cut into medium florets and leaves finely chopped
+- [ ] 2 potatoes,; cut into large cubes
+- [ ] 2 tomatoes,; cut into eights
 - [ ] 2 tsp salt
 - [ ] 1 cup warm water
 - [ ] 2 tsp turmeric powder
@@ -28,3 +28,6 @@ Author: Runa Begum
 6. Add potatoes and cook for 5-7 minutes.
 7. Add cauliflower. Mix well and cover to cook. Mix occasionally.
 8. When happy with softness of veg, cover with coriander.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE2OTkxMzg1NDddfQ==
+-->
