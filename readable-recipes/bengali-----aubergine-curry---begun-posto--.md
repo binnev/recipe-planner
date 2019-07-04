@@ -1,4 +1,4 @@
-# bengali (?) aubergine curry ("begun posto")
+# Bengali (?) Aubergine Curry ("Begun Posto")
 From https://www.youtube.com/watch?v=IlrH2CEoIzQ
 <img src='../recipes/begun-posto.png' width='300px'>
 
