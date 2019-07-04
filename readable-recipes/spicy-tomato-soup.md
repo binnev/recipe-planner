@@ -24,3 +24,7 @@ From https://www.youtube.com/watch?v=fYBRZjkDxVk
 6. Into the oven for 20-25 minutes at 180 C.
 7. Pour veg stock half way up the tomatoes and bring to the boil on the hob. Simmer for 3-4 minutes.
 8. Add the cream and either mash the tomatoes with a potato masher or blitz with a hand blender.
+
+## Equipment required:
+- Baking tray
+- Hand blender

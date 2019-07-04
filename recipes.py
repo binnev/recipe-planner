@@ -125,6 +125,11 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
         if step[-1] != ".":
             step = step+"."
         lines.append("{}. {}\n".format(ii+1, step))
+    # write equipment list
+    if "equipment" in recipe:
+        lines.append("\n## Equipment required:\n")
+        for item in recipe["equipment"]:
+            lines.append("- {}\n".format(item.strip().capitalize()))
 
     # write lines to file
     with open(filename, mode="w") as f:
@@ -185,8 +190,6 @@ def print_shopping_list(INGREDIENTS):
             if amount is None:
                 amount = ""
             else:
-                if amount % 1 == 0:  # remove decimal place from integer amounts
-                    amount = int(amount)
                 amount = str(amount)+" "
             unit = "" if unit is None else str(unit)+" "
             print(amount+unit+ing)
@@ -215,6 +218,9 @@ def print_shopping_list(INGREDIENTS):
 - [ ] Make the script somehow know that "large onion", "onion", "large white onion" etc
     are all part of the same class of thing. If not adding them together on the shopping
     list, then at least organise them such that they're near one another on the list.
+    Is it worth trying to make the script recognise size or colours?
+- [ ] move INGREDIENTS list to a pandas dataframe so we can easily sort it by ingredient
+    name.
 
 """
 
