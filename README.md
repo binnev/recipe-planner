@@ -50,7 +50,9 @@ Implement optional preparation specifier in ingredients:
 ```yaml
 - 1, kg, potatoes; chopped into cubes
 ```
+This will be separated from the ingredient field after the line is separated by commas, so it should play nice with the three types of ingredient specifier.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NzE3NzAwNywtNzEyODQwMTc2XX0=
+eyJoaXN0b3J5IjpbMzk2OTE4NDczLDE1OTcxNzcwMDcsLTcxMj
+g0MDE3Nl19
 -->
