@@ -98,7 +98,7 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
     if "image" in recipe:
         lines.append("<img src='{}' width='300px'>\n".format(recipe["image"]))
     # write ingredients list
-    lines.append("## Ingredients:\n")
+    lines.append("\n## Ingredients:\n")
     for ingredient, values in recipe["ingredients"].items():
         units, amount = values["units"], values["amount"]
         line = [amount, units, ingredient]  # assemble ingredient line
@@ -106,7 +106,7 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
         line = " ".join(map(str, line))     # convert to strings
         lines.append("- [ ] {}\n".format(line))
     # write method
-    lines.append("## Method:\n")
+    lines.append("\n## Method:\n")
     for ii, step in enumerate(recipe["method"]):
         lines.append("{}. {}\n".format(ii+1, step))
 
