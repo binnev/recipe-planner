@@ -1,5 +1,5 @@
 # egg in a basket
-<img src='egg-in-a-basket.jpg' width='300px'>
+<img src='../recipes/egg-in-a-basket.jpg' width='300px'>
 ## Ingredients:
 - [ ] 3 grams salt
 - [ ] 0.5 g pepper
