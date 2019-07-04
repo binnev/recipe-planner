@@ -28,10 +28,15 @@ ingredients:
 
 Writing this with correct YAML syntax produces overly cumbersome input files: 
 ```yaml
-- potatoes:
+ingredients:
+  - chilli powder:
     amount: 1
-    units: kg
-    prep: chopped into cubes
+    units: tsp
+  - large white onions: 
+    amount: 2
+    units: None
+  - fresh coriander
+       
 ```
 we can instead write: 
 ```yaml
@@ -44,5 +49,5 @@ we can instead write:
 - Plan meals: generate a single shopping list for multiple recipes
 - Use up spare pantry items: find recipes that best match user-provided spare pantry items
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU4NjI3NDg0XX0=
+eyJoaXN0b3J5IjpbNTgwOTAwMzk2XX0=
 -->
