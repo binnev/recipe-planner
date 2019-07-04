@@ -5,11 +5,12 @@ Author: Runa Begum
 ## Ingredients:
 - [ ] 2 packets minced sittol maas, defrosted
 - [ ] fresh coriander
-- [ ] 2 chillies, finely chopped
+- [ ] 2 green chillies, finely chopped
 - [ ] 2 tsp salt
 - [ ] 1 tsp turmeric
 - [ ] 0.5 tsp chilli powder
 - [ ] 1 large white onion, finely chopped
+- [ ] 2 chillies, finely chopped
 - [ ] 4 cloves garlic, finely chopped
 - [ ] 1 tsp turmeric powder
 - [ ] 1 tsp coriander powder
