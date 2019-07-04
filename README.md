@@ -39,11 +39,14 @@ ingredients:
     amount: None
     units: None    
 ```
-
+I will also implement an optional field 
+```yaml
+- 1, kg, potatoes; chopped into cubes
+```
 ## Aims: 
 - Store recipes electronically
 - Plan meals: generate a single shopping list for multiple recipes
 - Use up spare pantry items: find recipes that best match user-provided spare pantry items
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMjg0MDE3Nl19
+eyJoaXN0b3J5IjpbMTQwMzAyMTIxNl19
 -->
