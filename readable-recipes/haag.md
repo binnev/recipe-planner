@@ -3,10 +3,10 @@ Author: Runa Begum
 
 
 ## Ingredients:
-- [ ] 0.5 bulb garlic; finely chopped
-- [ ] 1 large white onion; finely sliced
-- [ ] 4 green chillies; finely chopped
-- [ ] 500 g frozen spinach; defrosted and chopped
+- [ ] 0.5 bulb garlic, finely chopped
+- [ ] 1 large white onion, finely sliced
+- [ ] 4 green chillies, finely chopped
+- [ ] 500 g frozen spinach, defrosted and chopped
 - [ ] 2 tbsp salt
 
 ## Method:

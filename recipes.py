@@ -3,27 +3,35 @@ import glob
 import pathlib
 import string
 
-def parse_ingredient(ingredient):
+def parse_ingredient(ingredient_line):
     """ function to parse one ingredient line from a recipe file, based on
     how many commas there are in the line (options listed below).
 
     Returns (amount, units, ingredient)"""
 
-    ing = ingredient.strip()  # strip whitespace
-    if "," not in ing:  # if it's a single thing e.g. "butter"
-        return None, None, ing
-    elif ing.count(",") == 1:  # numbered without units e.g ."1, egg"
-        n, thing = map(str.strip, ing.split(","))
-        return float(n), None, thing
-    elif ing.count(",") == 2:  # numberd with units e.g. 200, grams, flour
-        n, unit, thing = map(str.strip, ing.split(","))
-        """ I could add another function here to go and fetch the correct unit
-        when multiple exist e.g. "gram, grams, g" --> fetch the correct one
-        from a list of aliases """
-        return float(n), unit, thing
+    amount, units, ingredient, prep = None, None, None, None
+    ingredient_line = ingredient_line.strip()  # strip whitespace
+    if "," not in ingredient_line:  # if it's a single thing e.g. "butter"
+        ingredient = ingredient_line
+    elif ingredient_line.count(",") == 1:  # numbered without units e.g ."1, egg"
+        amount, ingredient = map(str.strip, ingredient_line.split(","))
+    elif ingredient_line.count(",") == 2:  # numberd with units e.g. 200, grams, flour
+        amount, units, ingredient = map(str.strip, ingredient_line.split(","))
     else:
-        raise Exception("too many commas in this ingredient line: "+ing)
+        raise Exception("too many commas in this ingredient line: "+ingredient_line)
 
+    # convert amount to numeric if present
+    if amount:
+        amount = float(amount)
+        # and remove decimal point for integer amounts
+        if amount % 1 == 0:
+            amount = int(amount)
+
+    # split off preparation instructions if present
+    if ";" in ingredient:
+        ingredient, prep = map(str.strip, ingredient.split(";"))
+
+    return amount, units, ingredient, prep
 
 def load_recipe(file):
     """ function to load a recipe from a YAML file. Requires the PyYAML library """
@@ -51,11 +59,8 @@ def load_recipe(file):
     ingredients = recipe["ingredients"]
     recipe["ingredients"] = d = dict()
     for ing in ingredients:
-        amount, units, ingredient = parse_ingredient(ing)
-        # remove decimal from integer amounts (e.g. 2.0 apples)
-        if amount and (amount % 1 == 0):
-            amount = int(amount)
-        d[ingredient] = dict(units=units, amount=amount)
+        amount, units, ingredient, prep = parse_ingredient(ing)
+        d[ingredient] = dict(units=units, amount=amount, prep=prep)
 
     return recipe
 
@@ -72,7 +77,6 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
     if filename is None:
         # remove punctutation
         """TODO: this is not very efficient. Replace with a regex"""
-#        filename = "".join(c for c in recipe["title"] if c not in string.punctuation)
 
         filename = punctuation_to_dashes(recipe["title"])
         filename = filename.strip()
@@ -89,7 +93,7 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
         directory = pathlib.Path(directory)
         filename = directory / filename
 
-        # also create relative path to image
+        # also create relative path to image, if image passed
         if "image" in recipe:
             relative_path_to_cwd = pathlib.Path("/".join(".." for i in directory.parts))
             recipe["image"] = relative_path_to_cwd / recipe["image"]
@@ -106,10 +110,12 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
     # write ingredients list
     lines.append("\n## Ingredients:\n")
     for ingredient, values in recipe["ingredients"].items():
-        units, amount = values["units"], values["amount"]
+        units, amount, prep = values["units"], values["amount"], values["prep"]
         line = [amount, units, ingredient]  # assemble ingredient line
         line = filter(None, line)           # remove None and other False values
         line = " ".join(map(str, line))     # convert to strings
+        if prep:                            # add preparation instructions if present
+            line += ", "+prep
         lines.append("- [ ] {}\n".format(line))
     # write method
     lines.append("\n## Method:\n")
@@ -199,22 +205,25 @@ def print_shopping_list(INGREDIENTS):
     "ingredients-curry mix: ...list...". Then have the load/save functions do their
     ingredients routine on ANY property of the recipe that *contains* the word
     "ingredients".
-- [ ] have another field in each ingredient for "prep". This will contain the stuff
+- [x] have another field in each ingredient for "prep". This will contain the stuff
     after the semicolon in "2, large white onions; finely chopped". This will prevent
     preparation instructions clashing with other entries of the same ingredient from
     other recipes.
+- [ ] Add another function to go and fetch the correct unit when multiple exist e.g.
+    "gram, grams, g" --> fetch the correct one from a list of aliases
+
 """
 
 # %% testing
 if __name__ == "__main__":
     recipe_files = glob.glob("recipes/*.yaml")
-    for file in recipe_files:
-        recipe = load_recipe(file)
+    recipes = [load_recipe(file) for file in recipe_files]
+
+    for recipe in recipes:
         recipe_to_markdown(recipe, directory="readable-recipes")
 
-    '''
-    recipe_files = glob.glob("recipes/*.txt")
-    recipes = [load_recipe(file) for file in recipe_files]
+    ''
+
     INGREDIENTS, EQUIPMENT = make_shopping_list(recipes)
     print_shopping_list(INGREDIENTS)
     #'''

@@ -3,9 +3,9 @@ Author: Runa Begum
 
 
 ## Ingredients:
-- [ ] 2 large white onion; finely chopped
-- [ ] 8 clove garlic; finely chopped
-- [ ] 8 green chillies; finely sliced
+- [ ] 2 large white onion, finely chopped
+- [ ] 8 clove garlic, finely chopped
+- [ ] 8 green chillies, finely sliced
 - [ ] 8 120g cans tinned sardines in tomato sauce with bones
 - [ ] 2 tbsp salt
 - [ ] 6 tbsp veg oil

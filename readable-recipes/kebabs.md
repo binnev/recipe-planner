@@ -4,8 +4,8 @@ Author: Runa Begum
 
 ## Ingredients:
 - [ ] 375 g reduced fat beef mince
-- [ ] 4 cloves garlic; grated
-- [ ] 0.5 large white onion; finely chopped
+- [ ] 4 cloves garlic, grated
+- [ ] 0.5 large white onion, finely chopped
 - [ ] 3 green chillies
 - [ ] 1 tsp salt
 - [ ] 0.5 tsp hot chilli powder
@@ -14,7 +14,7 @@ Author: Runa Begum
 - [ ] 1 tsp turmeric powder
 - [ ] 0.5 tsp ground ginger
 - [ ] 0.5 tsp curry powder
-- [ ] fresh coriander; finely chopped
+- [ ] fresh coriander, finely chopped
 - [ ] 1 egg
 
 ## Method:
