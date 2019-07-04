@@ -44,6 +44,13 @@ ingredients:
 - Store recipes electronically
 - Plan meals: generate a single shopping list for multiple recipes
 - Use up spare pantry items: find recipes that best match user-provided spare pantry items
+
+## To do
+Implement optional preparation specifier in ingredients: 
+```yaml
+- 1, kg, potatoes; chopped into cubes
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMjg0MDE3Nl19
+eyJoaXN0b3J5IjpbMTU5NzE3NzAwNywtNzEyODQwMTc2XX0=
 -->
