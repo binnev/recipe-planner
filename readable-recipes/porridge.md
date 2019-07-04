@@ -11,3 +11,7 @@
 2. Put cup in fridge.
 3. Wait 24 hours.
 4. Enjoy.
+
+## Equipment required:
+- Fridge
+- Cup
