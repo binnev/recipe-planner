@@ -3,15 +3,15 @@ Author: Runa Begum
 
 
 ## Ingredients:
-- [ ] 2 packets minced sittol maas,; defrosted
+- [ ] 2 packets minced sittol maas, defrosted
 - [ ] fresh coriander
-- [ ] 2 green chillies,; finely chopped
+- [ ] 2 green chillies, finely chopped
 - [ ] 2 tsp salt
 - [ ] 1 tsp turmeric
 - [ ] 0.5 tsp chilli powder
 - [ ] 1 large white onion, finely chopped
-- [ ] 2 chillies,; finely chopped
-- [ ] 4 cloves garlic,; finely chopped
+- [ ] 2 chillies, finely chopped
+- [ ] 4 cloves garlic, finely chopped
 - [ ] 1 tsp turmeric powder
 - [ ] 1 tsp coriander powder
 - [ ] 0.5 tsp curry powder
@@ -25,6 +25,3 @@ Author: Runa Begum
 6. In background, prepare fish balls. Use a bit of oil in palm of hand if needed.
 7. Add to sauce once it starts to simmer. Cook for 20-30 minutes.
 8. Top with fresh coriander. Serve with boiled rice.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5NTk3MTE3MF19
--->

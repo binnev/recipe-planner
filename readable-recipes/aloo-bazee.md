@@ -3,9 +3,9 @@ Author: Runa Begum
 
 
 ## Ingredients:
-- [ ] 1 kg King Edward potatoes,; peeled and thinly chopped into matchsticks.
-- [ ] 1 large white onion,; finely chopped
-- [ ] 3 green chillies,; finely chopped
+- [ ] 1 kg King Edward potatoes, peeled and thinly chopped into matchsticks.
+- [ ] 1 large white onion, finely chopped
+- [ ] 3 green chillies, finely chopped
 - [ ] 1 tbsp salt
 - [ ] 1 tsp turmeric powder
 - [ ] 1 tsp coriander powder
@@ -19,6 +19,3 @@ Author: Runa Begum
 3. Add spices and cook for a few minutes.
 4. Add potatoes. Drain potatoes from water and add. Stir in well. Cover with lid and cook on medium-low heat, stirring occasionally.
 5. Once satisfied with potato softness, sprinkle over roughly chopped coriander. Cover with lid for few mins before stirring in.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NjY3Njc2OF19
--->

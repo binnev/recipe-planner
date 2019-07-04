@@ -7,9 +7,9 @@ From https://www.youtube.com/watch?v=IlrH2CEoIzQ
 
 
 ## Ingredients:
-- [ ] 300 gram aubergines, (quartered lengthwise)
-- [ ] 1 red onion, (chopped)
-- [ ] 1 tomato, (chopped)
+- [ ] 300 gram aubergines, quartered lengthwise
+- [ ] 1 red onion, chopped
+- [ ] 1 tomato, chopped
 - [ ] 4 tbsp "poppy seed paste" (it's white though)
 - [ ] mustard seeds to fry in oil
 - [ ] 2 tbsp natural yoghurt
@@ -35,6 +35,3 @@ From https://www.youtube.com/watch?v=IlrH2CEoIzQ
 13. Add water and simmer for a while until the sauce begins to thicken.
 14. Add the aubergines and warm them up.
 15. Finish with the chopped coriander.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTkxNTk2NV19
--->
