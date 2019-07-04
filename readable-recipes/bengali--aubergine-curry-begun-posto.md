@@ -1,6 +1,7 @@
 # bengali (?) aubergine curry ("begun posto")
 From https://www.youtube.com/watch?v=IlrH2CEoIzQ
 <img src='../recipes/begun-posto.png' width='300px'>
+
 ## Ingredients:
 - [ ] 300 gram aubergines (quartered lengthwise)
 - [ ] 1 red onion (chopped)
@@ -13,6 +14,7 @@ From https://www.youtube.com/watch?v=IlrH2CEoIzQ
 - [ ] 1 tsp chilli powder
 - [ ] 2 green finger chillies
 - [ ] fresh coriander
+
 ## Method:
 1. rub the aubergines with salt and turmeric powder
 2. fry some mustard seeds in vegetable oil
