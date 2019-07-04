@@ -1,7 +1,10 @@
 # Bengali (?) Aubergine Curry ("Begun Posto")
 Author: Bangalir Ranna Banna
+
 From https://www.youtube.com/watch?v=IlrH2CEoIzQ
+
 <img src='../recipes/begun-posto.png' width='300px'>
+
 
 ## Ingredients:
 - [ ] 300 gram aubergines (quartered lengthwise)
