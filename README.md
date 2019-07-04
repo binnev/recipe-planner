@@ -10,12 +10,12 @@ The input files are `YAML` format in the `recipes` folder. There are 3 required 
 - ingredients (list; see below for formatting rules)
 - method (list)
 
-Any other fields will 
+The "author" and "source" fields are options
 
 ## Aims: 
 - Store recipes electronically
 - Plan meals: generate a single shopping list for multiple recipes
 - Use up spare pantry items: find recipes that best match user-provided spare pantry items
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjMzODc1OTNdfQ==
+eyJoaXN0b3J5IjpbLTgwNjMzNTI4M119
 -->
