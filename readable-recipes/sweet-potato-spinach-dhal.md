@@ -20,10 +20,10 @@ Author: Robin Neville
 - [ ] greek yoghurt and some kind of herb for dipping
 
 ## Method:
-1. heat oil. wide pan, tight lid
-2. cook onion gently for 10 minutes
-3. add chilli, ginger, garlic for 1 min
-4. add spices for 1 min
-5. turn heat to medium. Add sweet potato. Stir.
-6. Add lentils, stock, seasoning. Bring to boil then reduce heat. Cover and cook for 20 min till potato and lentils are tender
+1. Heat oil. wide pan, tight lid.
+2. Cook onion gently for 10 minutes.
+3. Add chilli, ginger, garlic for 1 min.
+4. Add spices for 1 min.
+5. Turn heat to medium. Add sweet potato. Stir.
+6. Add lentils, stock, seasoning. Bring to boil then reduce heat. Cover and cook for 20 min till potato and lentils are tender.
 7. Stir in spinach. Once wilted, add spring onions and basil, and serve.

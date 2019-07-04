@@ -21,14 +21,14 @@ From https://www.youtube.com/watch?v=8UjNbeLcBw4 and https://www.youtube.com/wat
 - [ ] 4 green finger chillies
 
 ## Method:
-1. add 4tsp oil and fry the garlic and ginger for couple mins
-2. add onion and cinnamon, bay leaves,  cardamoms, cloves, panch phoron
-3. add salt
-4. stir on medium heat and cover with lid. Let onions get translucent
-5. add turmeric, chilli powder, curry powder, cumin
-6. add water and cook on medium heat for 5 mins
-7. add tomatoes
-8. add green chillies and cook gently until the oil has risen to the top
-9. add the chicken and make sure the chicken is coated. Cover and cook on high heat for 10 minutes
+1. Add 4tsp oil and fry the garlic and ginger for couple mins.
+2. Add onion and cinnamon, bay leaves,  cardamoms, cloves, panch phoron.
+3. Add salt.
+4. Stir on medium heat and cover with lid. Let onions get translucent.
+5. Add turmeric, chilli powder, curry powder, cumin.
+6. Add water and cook on medium heat for 5 mins.
+7. Add tomatoes.
+8. Add green chillies and cook gently until the oil has risen to the top.
+9. Add the chicken and make sure the chicken is coated. Cover and cook on high heat for 10 minutes.
 10. Stir well and reduce heat. Cover.
-11. Finish with the chopped coriander
+11. Finish with the chopped coriander.

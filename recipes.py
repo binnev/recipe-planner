@@ -114,6 +114,10 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
     # write method
     lines.append("\n## Method:\n")
     for ii, step in enumerate(recipe["method"]):
+        step = step.strip()
+        step = step[0].capitalize()+step[1:]  # capitalise first letter
+        if step[-1] != ".":
+            step = step+"."
         lines.append("{}. {}\n".format(ii+1, step))
 
     # write lines to file

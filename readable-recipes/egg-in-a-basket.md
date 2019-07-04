@@ -10,9 +10,9 @@
 - [ ] butter
 
 ## Method:
-1. butter the slice of bread
-2. cut out the lid with the pint glass
-3. fry the lid with salt and pepper
-4. briefly fry the bread on one side, then flip it
-5. separate the egg white and yolk. Pour the white into the bread hole and fry until it is opaque
-6. place the yolk carefully on top. Add salt and pepper. Fry until the yolk is warm and the white is fully cooked (no jiggly bits).
+1. Butter the slice of bread.
+2. Cut out the lid with the pint glass.
+3. Fry the lid with salt and pepper.
+4. Briefly fry the bread on one side, then flip it.
+5. Separate the egg white and yolk. Pour the white into the bread hole and fry until it is opaque.
+6. Place the yolk carefully on top. Add salt and pepper. Fry until the yolk is warm and the white is fully cooked (no jiggly bits).
