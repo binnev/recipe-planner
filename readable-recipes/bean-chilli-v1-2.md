@@ -19,8 +19,8 @@ Author: Robin Neville, Runa Begum
 - [ ] 1 vegetable stock cube
 
 ## Method:
-1. sweat onions and garlic with dried thyme
-2. add cubed potato and brown
-3. add spice mix (with a bit of water) and fry gently
-4. add beans and tomatoes, stock cube, and a cup of water
-5. simmer for 30 minutes then high heat to reduce
+1. Sweat onions and garlic with dried thyme.
+2. Add cubed potato and brown.
+3. Add spice mix (with a bit of water) and fry gently.
+4. Add beans and tomatoes, stock cube, and a cup of water.
+5. Simmer for 30 minutes then high heat to reduce.
