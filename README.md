@@ -14,10 +14,13 @@ The "author" and "source" fields will produce lines in the output markdown files
 
 The user can add other fields provided they have correct `YAML` syntax, but the python script won't currently do anything with them.
 
+### Ingredient syntax
+To preserve the natural-language feel of the input files, I have implemented a simple 
+
 ## Aims: 
 - Store recipes electronically
 - Plan meals: generate a single shopping list for multiple recipes
 - Use up spare pantry items: find recipes that best match user-provided spare pantry items
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MzA0MTk4M119
+eyJoaXN0b3J5IjpbMTgyNjExODkxOV19
 -->
