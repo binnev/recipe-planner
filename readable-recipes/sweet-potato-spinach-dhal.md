@@ -1,4 +1,4 @@
-# Sweet Potato Spinach Dhal
+# Sweet potato spinach dhal
 Author: Robin Neville
 
 

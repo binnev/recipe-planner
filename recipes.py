@@ -95,10 +95,10 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
             recipe["image"] = relative_path_to_cwd / recipe["image"]
 
     # construct list of lines to write to file
-    lines = ["# {}\n".format(recipe["title"].title())]  # write title
+    lines = ["# {}\n".format(recipe["title"].capitalize())]  # write title
     # optional entries
     if "author" in recipe:
-        lines.append("Author: {}\n\n".format(recipe["author"]))
+        lines.append("Author: {}\n\n".format(recipe["author"].title()))
     if "source" in recipe:
         lines.append("From {}\n\n".format(recipe["source"]))
     if "image" in recipe:

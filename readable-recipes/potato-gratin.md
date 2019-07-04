@@ -1,4 +1,4 @@
-# Potato Gratin
+# Potato gratin
 Author: Nigella Lawson
 
 From https://www.nigella.com/recipes/creamy-potato-gratin

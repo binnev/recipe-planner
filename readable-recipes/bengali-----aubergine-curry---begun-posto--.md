@@ -1,4 +1,4 @@
-# Bengali (?) Aubergine Curry ("Begun Posto")
+# Bengali (?) aubergine curry ("begun posto")
 Author: Bangalir Ranna Banna
 
 From https://www.youtube.com/watch?v=IlrH2CEoIzQ

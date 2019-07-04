@@ -1,4 +1,4 @@
-# Bean Chilli V1.2
+# Bean chilli v1.2
 Author: Robin Neville, Runa Begum
 
 
