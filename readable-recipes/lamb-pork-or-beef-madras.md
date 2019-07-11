@@ -3,6 +3,8 @@ Author: Madhur Jaffrey
 
 From https://thehappyfoodie.co.uk/recipes/lamb-pork-or-beef-madras
 
+<img src='../recipes/lamb-pork-or-beef-madras.jpg' width='300px'>
+
 
 ## Ingredients:
 - [ ] 1 tbsp  coriander seeds
