@@ -19,6 +19,7 @@ From https://www.youtube.com/watch?v=8UjNbeLcBw4 and https://www.youtube.com/wat
 - [ ] 1 tsp red chilli powder
 - [ ] 1 tsp cumin powder
 - [ ] 4 green finger chillies
+- [ ] 500 g new potatoes
 
 ## Method:
 1. Add 4tsp oil and fry the garlic and ginger for couple mins.
