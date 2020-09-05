@@ -11,7 +11,7 @@ From https://www.youtube.com/watch?v=43yWAafyFMQ
 - [ ] 1 inch ginger
 - [ ] 1 carrot
 - [ ] 0.25 cup cabbage, shredded
-- [ ] 1 red pepper
+- [ ] 1 red bell pepper
 - [ ] 2 tomatoes
 - [ ] 1 tsp turmeric
 - [ ] 1 tbsp cumin powder
