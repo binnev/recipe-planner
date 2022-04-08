@@ -4,6 +4,8 @@ from pathlib import Path
 import yaml
 from django.core.management.base import BaseCommand
 
+from recipe.models import Recipe
+from recipe.serializers import RecipeSerializer
 from sous_chef.settings import RECIPE_DIR
 
 
@@ -20,8 +22,12 @@ def import_yaml_recipes():
         with open(filename) as f:
             print(f"Loading {filename}")
             recipe_dict = yaml.safe_load(f)
-            parse_recipe_dict(recipe_dict)
+            recipe = parse_recipe_dict(recipe_dict)
+            print(recipe)
 
 
-def parse_recipe_dict(recipe: dict):
-    pass
+def parse_recipe_dict(recipe_dict) -> Recipe:
+    serializer = RecipeSerializer(data=recipe_dict)
+    serializer.is_valid(raise_exception=True)
+    recipe = serializer.save()
+    return recipe
