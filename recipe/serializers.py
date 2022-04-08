@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from recipe.models import Recipe, Ingredient, Equipment, Author
+from recipe.models import Recipe, Ingredient, Equipment, Author, MethodStep
 from recipes import parse_ingredient
 
 
@@ -40,7 +40,8 @@ class RecipeSerializer(serializers.ModelSerializer):
 
     ingredients = IngredientSerializer(many=True)
     equipment = EquipmentSerializer(many=True, required=False)
-    method =
+    method = MethodStepSerializer(many=True, required=False)
+
     class Meta:
         model = Recipe
         fields = [
@@ -48,6 +49,7 @@ class RecipeSerializer(serializers.ModelSerializer):
             "serves", "source", "image", "notes",
             "ingredients",
             "equipment",
+            "method",
         ]
 
     def create(self, validated_data):
@@ -57,6 +59,7 @@ class RecipeSerializer(serializers.ModelSerializer):
 
         equipment_data = validated_data.pop("equipment", [])
         ingredient_data = validated_data.pop("ingredients", [])
+        method_data = validated_data.pop("method", [])
 
         recipe = super().create(validated_data)
 
@@ -65,5 +68,8 @@ class RecipeSerializer(serializers.ModelSerializer):
 
         for data in ingredient_data:
             Ingredient.objects.create(recipe=recipe, **data)
+
+        for data in method_data:
+            MethodStep.objects.create(recipe=recipe, **data)
 
         return recipe
