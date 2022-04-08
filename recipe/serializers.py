@@ -13,14 +13,13 @@ class AuthorSerializer(serializers.ModelSerializer):
         return super().to_internal_value(data)
 
 
-class IngredientSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Ingredient
+class IngredientSerializer(serializers.Serializer):
+    pass
 
-
-class EquipmentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Equipment
+class EquipmentSerializer(serializers.Serializer):
+    def to_internal_value(self, data):
+        data = {"name": data}
+        return super().to_internal_value(data)
 
 
 class RecipeSerializer(serializers.ModelSerializer):
@@ -28,7 +27,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     title = serializers.CharField(source="name")
 
     # ingredients = IngredientSerializer(many=True)
-    # equipment = EquipmentSerializer(many=True)
+    equipment = EquipmentSerializer(many=True, required=False)
 
     class Meta:
         model = Recipe
@@ -36,12 +35,20 @@ class RecipeSerializer(serializers.ModelSerializer):
             "title", "author", "prep_time", "cook_time",
             "serves", "source", "image", "notes",
             # "ingredients",
-            # "equipment",
+            "equipment",
         ]
 
     def create(self, validated_data):
-        if author_data := validated_data.pop("author", None):
+        if author_data := validated_data.get("author"):
             author, _ = Author.objects.get_or_create(**author_data)
             validated_data["author"] = author
 
-        return super().create(validated_data)
+        equipment_data = validated_data.pop("equipment", [])
+        ingredient_data = validated_data.pop("ingredients", [])
+
+        recipe = super().create(validated_data)
+
+        for data in equipment_data:
+            Equipment.objects.create(recipe=recipe, **data)
+
+        return recipe
