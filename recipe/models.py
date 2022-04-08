@@ -39,3 +39,8 @@ class Equipment(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class MethodStep(models.Model):
+    recipe = models.ForeignKey(Recipe, related_name="method_steps", on_delete=models.CASCADE)
+    description = models.TextField()

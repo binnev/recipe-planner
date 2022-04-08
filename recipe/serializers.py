@@ -29,13 +29,18 @@ class EquipmentSerializer(serializers.Serializer):
         return {"name": data}
 
 
+class MethodStepSerializer(serializers.Serializer):
+    def to_internal_value(self, data):
+        return {"description": data}
+
+
 class RecipeSerializer(serializers.ModelSerializer):
     author = AuthorSerializer(required=False)
     title = serializers.CharField(source="name")
 
     ingredients = IngredientSerializer(many=True)
     equipment = EquipmentSerializer(many=True, required=False)
-
+    method =
     class Meta:
         model = Recipe
         fields = [
