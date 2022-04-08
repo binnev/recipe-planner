@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from recipe.models import Recipe, Ingredient, Equipment, Author
+from recipes import parse_ingredient
 
 
 class AuthorSerializer(serializers.ModelSerializer):
@@ -13,7 +14,14 @@ class AuthorSerializer(serializers.ModelSerializer):
 
 
 class IngredientSerializer(serializers.Serializer):
-    pass
+    def to_internal_value(self, data):
+        amount, unit, description, preparation = parse_ingredient(data)
+        return {
+            "amount": amount,
+            "unit": unit,
+            "description": description,
+            "preparation": preparation,
+        }
 
 
 class EquipmentSerializer(serializers.Serializer):
@@ -25,7 +33,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     author = AuthorSerializer(required=False)
     title = serializers.CharField(source="name")
 
-    # ingredients = IngredientSerializer(many=True)
+    ingredients = IngredientSerializer(many=True)
     equipment = EquipmentSerializer(many=True, required=False)
 
     class Meta:
@@ -33,7 +41,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         fields = [
             "title", "author", "prep_time", "cook_time",
             "serves", "source", "image", "notes",
-            # "ingredients",
+            "ingredients",
             "equipment",
         ]
 
@@ -49,5 +57,8 @@ class RecipeSerializer(serializers.ModelSerializer):
 
         for data in equipment_data:
             Equipment.objects.create(recipe=recipe, **data)
+
+        for data in ingredient_data:
+            Ingredient.objects.create(recipe=recipe, **data)
 
         return recipe

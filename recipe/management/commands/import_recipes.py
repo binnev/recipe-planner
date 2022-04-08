@@ -21,8 +21,7 @@ def import_yaml_recipes():
         with open(filename) as f:
             print(f"Loading {filename}")
             recipe_dict = yaml.safe_load(f)
-            recipe = parse_recipe_dict(recipe_dict)
-            print(recipe)
+            parse_recipe_dict(recipe_dict)
 
 
 def parse_recipe_dict(recipe_dict) -> Recipe:
