@@ -29,6 +29,9 @@ class Ingredient(models.Model):
     description = models.CharField(max_length=50)
     preparation = models.CharField(max_length=50)
 
+    def __str__(self):
+        return f"{self.amount} {self.unit} of {self.name}"
+
 
 class Equipment(models.Model):
     recipe = models.ForeignKey(Recipe, related_name="equipment", on_delete=models.CASCADE)

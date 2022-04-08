@@ -9,17 +9,16 @@ class AuthorSerializer(serializers.ModelSerializer):
         fields = ["name"]
 
     def to_internal_value(self, data):
-        data = {"name": data}
-        return super().to_internal_value(data)
+        return {"name": data}
 
 
 class IngredientSerializer(serializers.Serializer):
     pass
 
+
 class EquipmentSerializer(serializers.Serializer):
     def to_internal_value(self, data):
-        data = {"name": data}
-        return super().to_internal_value(data)
+        return {"name": data}
 
 
 class RecipeSerializer(serializers.ModelSerializer):
