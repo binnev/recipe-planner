@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from recipe.models import Recipe, Ingredient, Equipment
+from recipe.models import Recipe, Ingredient, Equipment, MethodStep
 
 
 class IngredientInline(admin.TabularInline):
@@ -17,6 +17,12 @@ class EquipmentInline(admin.TabularInline):
     fields = ("name",)
 
 
+class MethodStepInline(admin.TabularInline):
+    model = MethodStep
+    extra = 0
+    fields = ("description",)
+
+
 @admin.register(Recipe)
 class RecipeAdmin(admin.ModelAdmin):
     fields = (
@@ -27,5 +33,5 @@ class RecipeAdmin(admin.ModelAdmin):
         "serves", "source", "image", "notes"
     )
     inlines = (
-        IngredientInline, EquipmentInline,
+        IngredientInline, EquipmentInline, MethodStepInline,
     )
