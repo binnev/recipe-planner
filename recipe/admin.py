@@ -6,9 +6,7 @@ from recipe.models import Recipe, Ingredient, Equipment, MethodStep
 class IngredientInline(admin.TabularInline):
     model = Ingredient
     extra = 0
-    fields = (
-        "amount", "unit", "description", "preparation"
-    )
+    fields = ("amount", "unit", "description", "preparation")
 
 
 class EquipmentInline(admin.TabularInline):
@@ -25,13 +23,9 @@ class MethodStepInline(admin.TabularInline):
 
 @admin.register(Recipe)
 class RecipeAdmin(admin.ModelAdmin):
-    fields = (
-        "name",
-        "author",
-        "prep_time",
-        "cook_time",
-        "serves", "source", "image", "notes"
-    )
+    fields = ("name", "author", "prep_time", "cook_time", "serves", "source", "image", "notes")
     inlines = (
-        IngredientInline, EquipmentInline, MethodStepInline,
+        IngredientInline,
+        EquipmentInline,
+        MethodStepInline,
     )

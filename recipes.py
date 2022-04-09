@@ -3,8 +3,9 @@ import glob
 import pathlib
 import string
 
+
 def parse_ingredient(ingredient_line):
-    """ function to parse one ingredient line from a recipe file, based on
+    """function to parse one ingredient line from a recipe file, based on
     how many commas there are in the line (options listed below).
 
     Returns (amount, units, ingredient)"""
@@ -18,7 +19,7 @@ def parse_ingredient(ingredient_line):
     elif ingredient_line.count(",") == 2:  # numberd with units e.g. 200, grams, flour
         amount, units, ingredient = map(str.strip, ingredient_line.split(","))
     else:
-        raise Exception("too many commas in this ingredient line: "+ingredient_line)
+        raise Exception("too many commas in this ingredient line: " + ingredient_line)
 
     # convert amount to numeric if present
     if amount:
@@ -33,8 +34,9 @@ def parse_ingredient(ingredient_line):
 
     return amount, units, ingredient, prep
 
+
 def load_recipe(file):
-    """ function to load a recipe from a YAML file. Requires the PyYAML library """
+    """function to load a recipe from a YAML file. Requires the PyYAML library"""
     # open the file
     file = pathlib.Path(file)
     with open(file) as f:
@@ -44,8 +46,7 @@ def load_recipe(file):
     required_fields = "title", "ingredients", "method"
     for field in required_fields:
         if field not in recipe:
-            raise Exception("Recipe {} does not contain "
-                            "required field '{}'".format(file, field))
+            raise Exception("Recipe {} does not contain " "required field '{}'".format(file, field))
 
     # add source directory to recipe
     recipe["source_dir"] = file.parent if file.parent else pathlib.Path()
@@ -70,8 +71,8 @@ def punctuation_to_dashes(s):
 
 
 def recipe_to_markdown(recipe, filename=None, directory=None):
-    """ store a recipe in an easily readable markdown format (good for phones in the
-    kitchen) """
+    """store a recipe in an easily readable markdown format (good for phones in the
+    kitchen)"""
 
     # create a filename if none is given
     if filename is None:
@@ -81,7 +82,7 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
         filename = punctuation_to_dashes(recipe["title"])
         filename = filename.strip()
         # convert spaces to dashes
-        filename = filename.replace(" ", "-")+".md"
+        filename = filename.replace(" ", "-") + ".md"
         pathlib.Path(filename)
 
     # append markdown file extension if not included already
@@ -112,19 +113,19 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
     for ingredient, values in recipe["ingredients"].items():
         units, amount, prep = values["units"], values["amount"], values["prep"]
         line = [amount, units, ingredient]  # assemble ingredient line
-        line = filter(None, line)           # remove None and other False values
-        line = " ".join(map(str, line))     # convert to strings
-        if prep:                            # add preparation instructions if present
-            line += ", "+prep
+        line = filter(None, line)  # remove None and other False values
+        line = " ".join(map(str, line))  # convert to strings
+        if prep:  # add preparation instructions if present
+            line += ", " + prep
         lines.append("- [ ] {}\n".format(line))
     # write method
     lines.append("\n## Method:\n")
     for ii, step in enumerate(recipe["method"]):
         step = step.strip()
-        step = step[0].capitalize()+step[1:]  # capitalise first letter
+        step = step[0].capitalize() + step[1:]  # capitalise first letter
         if step[-1] != ".":
-            step = step+"."
-        lines.append("{}. {}\n".format(ii+1, step))
+            step = step + "."
+        lines.append("{}. {}\n".format(ii + 1, step))
     # write equipment list
     if "equipment" in recipe:
         lines.append("\n## Equipment required:\n")
@@ -139,8 +140,8 @@ def recipe_to_markdown(recipe, filename=None, directory=None):
 
 
 def add_ingredients(ing1, ing2):
-    """ function to add together two of the same ingredient, with different
-    amounts and units """
+    """function to add together two of the same ingredient, with different
+    amounts and units"""
 
 
 def make_shopping_list(recipe_list):
@@ -190,9 +191,10 @@ def print_shopping_list(INGREDIENTS):
             if amount is None:
                 amount = ""
             else:
-                amount = str(amount)+" "
-            unit = "" if unit is None else str(unit)+" "
-            print(amount+unit+ing)
+                amount = str(amount) + " "
+            unit = "" if unit is None else str(unit) + " "
+            print(amount + unit + ing)
+
 
 # %% TODO
 """
@@ -232,7 +234,7 @@ if __name__ == "__main__":
     for recipe in recipes:
         recipe_to_markdown(recipe, directory="readable-recipes")
 
-    ''
+    ""
 
     INGREDIENTS, EQUIPMENT = make_shopping_list(recipes)
     print_shopping_list(INGREDIENTS)
