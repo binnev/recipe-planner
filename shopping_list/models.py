@@ -10,13 +10,15 @@ class ShoppingList(models.Model):
     def aggregated_items(self):
         items = InMemoryQuerySet()
         for planned_recipe in self.recipes.iterator():
-            for ing in planned_recipe.recipe.ingredients.iterator():
-                if ing.amount:
-                    ing.amount *= planned_recipe.scale_by
-                if matching_ing := items.filter(proper_name=ing.proper_name, unit=ing.unit).first():
-                    matching_ing.amount = (matching_ing.amount or 0) + (ing.amount or 0)
+            for ingredient in planned_recipe.recipe.ingredients.iterator():
+                if ingredient.amount:
+                    ingredient.amount *= planned_recipe.scale_by
+                if existing := items.filter(
+                    proper_name=ingredient.proper_name, proper_unit=ingredient.proper_unit
+                ).first():
+                    existing.amount = (existing.amount or 0) + (ingredient.amount or 0)
                 else:
-                    items.append(ing)
+                    items.append(ingredient)
         items = list(sorted(items, key=lambda ing: ing.description))
         return "\n".join(map(str, items))
 

@@ -1,6 +1,6 @@
 from django.db import models
 
-from recipe.aliases import INGREDIENT_ALIASES
+from recipe.aliases import INGREDIENT_ALIASES, UNIT_ALIASES
 
 
 class Author(models.Model):
@@ -36,7 +36,7 @@ class Ingredient(models.Model):
     def __str__(self):
         s = f"{self.proper_name}"
         if self.unit:
-            s = f"{self.unit} of {s}"
+            s = f"{self.proper_unit} of {s}"
         if self.amount:
             amount = int(self.amount) if self.amount % 1 == 0 else self.amount
             s = f"{amount} {s}"
@@ -47,6 +47,10 @@ class Ingredient(models.Model):
     @property
     def proper_name(self):
         return INGREDIENT_ALIASES.get(self.description, self.description)
+
+    @property
+    def proper_unit(self):
+        return UNIT_ALIASES.get(self.unit, self.unit)
 
 
 class Equipment(models.Model):
