@@ -1,6 +1,7 @@
 from django.db import models
 
 from recipe.aliases import INGREDIENT_ALIASES, UNIT_ALIASES, UNIT_RATIOS
+from recipe.exceptions import FailedConversion
 
 
 class Author(models.Model):
@@ -55,10 +56,12 @@ class Ingredient(models.Model):
     def amount_in_units(self, desired_unit):
         for unit, related_units in UNIT_RATIOS.items():
             if unit == desired_unit and self.proper_unit in related_units:
-                ratio = 1/ related_units[self.proper_unit]
+                ratio = 1 / related_units[self.proper_unit]
+                return self.amount * ratio
             elif unit == self.proper_unit and desired_unit in related_units:
                 ratio = related_units[desired_unit]
-            return self.amount * ratio
+                return self.amount * ratio
+        raise FailedConversion()
 
 
 class Equipment(models.Model):
