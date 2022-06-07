@@ -2,3 +2,5 @@ django
 pyyaml
 djangorestframework
 black
+pytest
+pytest-django
