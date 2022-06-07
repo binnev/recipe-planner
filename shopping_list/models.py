@@ -16,7 +16,7 @@ class ShoppingList(models.Model):
                 if existing := items.filter(
                     proper_name=ingredient.proper_name, proper_unit=ingredient.proper_unit
                 ).first():
-                    existing.amount = (existing.amount or 0) + (ingredient.amount or 0)
+                    existing.amount += ingredient.amount
                 else:
                     items.append(ingredient)
         items = list(sorted(items, key=lambda ing: ing.description))

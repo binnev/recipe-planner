@@ -28,7 +28,7 @@ class Recipe(models.Model):
 
 class Ingredient(models.Model):
     recipe = models.ForeignKey(Recipe, related_name="ingredients", on_delete=models.CASCADE)
-    amount = models.FloatField(null=True, blank=True)
+    amount = models.FloatField(default=0)
     unit = models.CharField(max_length=15, null=True, blank=True)
     description = models.CharField(max_length=50)
     preparation = models.CharField(max_length=50, null=True, blank=True)
