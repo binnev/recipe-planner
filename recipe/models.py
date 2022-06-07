@@ -1,5 +1,7 @@
 from django.db import models
 
+from recipe.ingredient_aliases import INGREDIENT_ALIASES
+
 
 class Author(models.Model):
     name = models.CharField(max_length=100)
@@ -32,7 +34,7 @@ class Ingredient(models.Model):
     preparation = models.CharField(max_length=50, null=True, blank=True)
 
     def __str__(self):
-        s = f"{self.description}"
+        s = f"{self.proper_name}"
         if self.unit:
             s = f"{self.unit} of {s}"
         if self.amount:
@@ -41,6 +43,10 @@ class Ingredient(models.Model):
         if self.preparation:
             s = f"{s}, {self.preparation}"
         return s
+
+    @property
+    def proper_name(self):
+        return INGREDIENT_ALIASES.get(self.description, self.description)
 
 
 class Equipment(models.Model):

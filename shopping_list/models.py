@@ -13,7 +13,7 @@ class ShoppingList(models.Model):
             for ing in planned_recipe.recipe.ingredients.iterator():
                 if ing.amount:
                     ing.amount *= planned_recipe.scale_by
-                if matching_ing := items.filter(description=ing.description, unit=ing.unit).first():
+                if matching_ing := items.filter(proper_name=ing.proper_name, unit=ing.unit).first():
                     matching_ing.amount = (matching_ing.amount or 0) + (ing.amount or 0)
                 else:
                     items.append(ing)
