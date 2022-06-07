@@ -32,7 +32,15 @@ class Ingredient(models.Model):
     preparation = models.CharField(max_length=50, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.amount} {self.unit} of {self.description}"
+        s = f"{self.description}"
+        if self.unit:
+            s = f"{self.unit} of {s}"
+        if self.amount:
+            amount = int(self.amount) if self.amount % 1 == 0 else self.amount
+            s = f"{amount} {s}"
+        if self.preparation:
+            s = f"{s}, {self.preparation}"
+        return s
 
 
 class Equipment(models.Model):
