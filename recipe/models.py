@@ -10,9 +10,9 @@ class Author(models.Model):
 
 class Recipe(models.Model):
     name = models.CharField(max_length=100)
-    author = models.ForeignKey(Author, null=True, related_name="recipes", on_delete=models.CASCADE)
-    prep_time = models.IntegerField(null=True)
-    cook_time = models.IntegerField(null=True)
+    author = models.ForeignKey(Author, null=True, blank=True, related_name="recipes", on_delete=models.CASCADE)
+    prep_time = models.IntegerField(null=True, blank=True)
+    cook_time = models.IntegerField(null=True, blank=True)
     serves = models.CharField(null=True, blank=True, max_length=10)
     source = models.CharField(null=True, blank=True, max_length=200)
     image = models.CharField(null=True, blank=True, max_length=100)
@@ -24,7 +24,7 @@ class Recipe(models.Model):
 
 class Ingredient(models.Model):
     recipe = models.ForeignKey(Recipe, related_name="ingredients", on_delete=models.CASCADE)
-    amount = models.FloatField(null=True)
+    amount = models.FloatField(null=True, blank=True)
     unit = models.CharField(max_length=15, null=True, blank=True)
     description = models.CharField(max_length=50)
     preparation = models.CharField(max_length=50, null=True, blank=True)
