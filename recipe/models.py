@@ -1,6 +1,6 @@
 from django.db import models
 
-from recipe.ingredient_aliases import INGREDIENT_ALIASES
+from recipe.aliases import INGREDIENT_ALIASES
 
 
 class Author(models.Model):
