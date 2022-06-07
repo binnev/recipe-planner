@@ -10,7 +10,9 @@ class Author(models.Model):
 
 class Recipe(models.Model):
     name = models.CharField(max_length=100)
-    author = models.ForeignKey(Author, null=True, blank=True, related_name="recipes", on_delete=models.CASCADE)
+    author = models.ForeignKey(
+        Author, null=True, blank=True, related_name="recipes", on_delete=models.CASCADE
+    )
     prep_time = models.IntegerField(null=True, blank=True)
     cook_time = models.IntegerField(null=True, blank=True)
     serves = models.CharField(null=True, blank=True, max_length=10)
