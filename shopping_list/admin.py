@@ -1,8 +1,15 @@
 from django.contrib import admin
 
-from shopping_list.models import ShoppingList
+from shopping_list.models import ShoppingList, PlannedRecipe
+
+
+class PlannedRecipeInline(admin.TabularInline):
+    model = PlannedRecipe
+    extra = 0
 
 
 @admin.register(ShoppingList)
 class ShoppingListAdmin(admin.ModelAdmin):
-    pass
+    fields = ["aggregated_items"]
+    readonly_fields = ["aggregated_items"]
+    inlines = [PlannedRecipeInline]
