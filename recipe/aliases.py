@@ -23,7 +23,7 @@ _UNIT_ALIASES = {
     "clove": ["cloves"],  # of garlic
 }
 
-UNIT_RATIOS = {
+_UNIT_RATIOS = {
     KG: {1000: G},
     L: {1000: ML},
     TBSP: {3: TSP},
@@ -37,4 +37,8 @@ INGREDIENT_ALIASES = {
 
 UNIT_ALIASES = {
     alias: preferred_name for preferred_name, aliases in _UNIT_ALIASES.items() for alias in aliases
+}
+
+UNIT_RATIOS = {
+    unit: {v: k for k, v in related_units.items()} for unit, related_units in _UNIT_RATIOS.items()
 }
