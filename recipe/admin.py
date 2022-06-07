@@ -31,10 +31,7 @@ class RecipeAdmin(admin.ModelAdmin):
         "cook_time",
         "serves",
     ]
-    list_filter = [
-        "author",
-        "prep_time"
-    ]
+    list_filter = ["author"]
     inlines = (
         IngredientInline,
         EquipmentInline,
