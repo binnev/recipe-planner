@@ -10,7 +10,7 @@ def parse_ingredient(ingredient_line):
 
     Returns (amount, units, ingredient)"""
 
-    amount, units, ingredient, prep = None, None, None, None
+    amount, units, ingredient, prep = 0, None, None, None
     ingredient_line = ingredient_line.strip()  # strip whitespace
     if "," not in ingredient_line:  # if it's a single thing e.g. "butter"
         ingredient = ingredient_line
