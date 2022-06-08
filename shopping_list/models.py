@@ -42,3 +42,7 @@ class PlannedRecipe(models.Model):
     )
     recipe = models.ForeignKey("recipe.Recipe", on_delete=models.CASCADE)
     scale_by = models.IntegerField(default=1)
+
+    @property
+    def name(self):
+        return self.recipe.name
