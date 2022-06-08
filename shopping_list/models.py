@@ -32,7 +32,7 @@ class ShoppingList(models.Model):
                 # nothing matching yet
                 else:
                     items.append(ingredient)
-        items = list(sorted(items, key=lambda ing: ing.description))
+        items = list(sorted(items, key=lambda ing: ing.proper_name))
         return "\n".join(map(str, items))
 
 
