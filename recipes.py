@@ -228,7 +228,7 @@ def print_shopping_list(INGREDIENTS):
 
 # %% testing
 if __name__ == "__main__":
-    recipe_files = glob.glob("recipes/*.yaml")
+    recipe_files = glob.glob("recipe_data/*bolognese*.yaml")
     recipes = [load_recipe(file) for file in recipe_files]
 
     for recipe in recipes:
